@@ -1,7 +1,7 @@
 /**
  * ElektrischBudgetAuto
  */
-public class ElektrischBudgetAuto  extends BudgetAuto{
+public class ElektrischBudgetAuto extends BudgetAuto{
     String type = "elektrisch";
     @Override
     public String getType() {
