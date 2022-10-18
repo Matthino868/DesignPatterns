@@ -3,16 +3,17 @@
  */
 public interface Auto {
     String getType();
+
     String getModel();
 
     void show();
 
     // public Auto(AutoFactory factory) {
-    //     factory.
+    // factory.
     // }
 
     // public void bouw() {
-    //     bouwmotor();
+    // bouwmotor();
     // }
 
 }

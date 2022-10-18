@@ -22,13 +22,21 @@ public class App {
         if(lijst.get(1) == "budget"){
             auto = factory.createBudgetAuto();
         }
+        
         else{
             auto = factory.createPerformanceAuto();
         }
 
         auto.show();
 
-        if()
+        // Builder bob;
+
+        // if(lijst.get(1) == "budget"){
+        //     bob = new BudgetBuilder();
+        // }
+        // else{
+        //     bob = new BudgetBuilder();
+        // }
 
         // auto = new Auto(factory);
 

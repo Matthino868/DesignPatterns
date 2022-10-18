@@ -6,9 +6,9 @@ public class ElektrischFactory implements AutoFactory {
 
     public ElektrischFactory() {
         System.out.println("Het wordt een elektrische auto");
-	}
+    }
 
-	public Auto createPerformanceAuto() {
+    public Auto createPerformanceAuto() {
         System.out.println("Het wordt het performance model");
         return new ElektrischPerformanceAuto();
     }
