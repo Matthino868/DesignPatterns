@@ -5,7 +5,6 @@ public class BrandstofPerformanceAuto extends PerformanceAuto{
     String type = "brandstof";
     @Override
     public String getType() {
-        // TODO Auto-generated method stub
         return type;
     }
     @Override
