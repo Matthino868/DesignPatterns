@@ -9,7 +9,7 @@ public class ElektrischPerformanceAuto extends PerformanceAuto{
     }
     @Override
     public String getModel() {
-        return super.model;
+        return "performance";
     }
     public void show(){
         System.out.println("Dit is het "+ getType() + " " +getModel() + " model");

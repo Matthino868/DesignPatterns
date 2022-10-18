@@ -13,7 +13,7 @@ public class ElektrischBudgetAuto  extends BudgetAuto{
         return super.model;
     }
     public void show(){
-        System.out.println("Dit is het "+ getType() + getModel() + " model");
+        System.out.println("Dit is het "+ getType() + " " +  getModel() + " model");
     }
     
 }

@@ -3,12 +3,12 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("start");
+        //System.out.println("start");
 
         // Lijst met opties
         List<Object> lijst = new ArrayList<Object>();
         lijst.add("elektrisch");
-        lijst.add("performance");
+        lijst.add("budget");
 
         AutoFactory factory;
         Auto auto;
