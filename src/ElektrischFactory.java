@@ -1,10 +1,12 @@
+
 /**
  * ElektrischFactory
  */
 public class ElektrischFactory implements AutoFactory {
 
-    public ElektrischFactory(String[] lijst) {
-	}
+    // public ElektrischFactory() {
+        
+	// }
 
 	public void createPerformanceAuto() {
         System.out.println("Create PerformanceElektrischAuto");

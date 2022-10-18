@@ -1,9 +1,10 @@
+
 /**
  * BrandstofFactory
  */
 public class BrandstofFactory implements AutoFactory {
-    public BrandstofFactory(String[] lijst) {
-	}
+    // public BrandstofFactory() {
+	// }
 
 	public void createPerformanceAuto() {
         System.out.println("Create PerformanceBrandstofAuto");
