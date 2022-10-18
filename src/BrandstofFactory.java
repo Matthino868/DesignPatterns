@@ -3,14 +3,19 @@
  * BrandstofFactory
  */
 public class BrandstofFactory implements AutoFactory {
-    // public BrandstofFactory() {
-	// }
+    public BrandstofFactory() {
+        System.out.println("Het wordt een brandstof auto");
 
-	public void createPerformanceAuto() {
-        System.out.println("Create PerformanceBrandstofAuto");
     }
 
-    public void createBudgetAuto() {
-        System.out.println("Create Budget BrandstofAuto");
+    public Auto createPerformanceAuto() {
+        System.out.println("Het wordt het performance model");
+        return new BrandstofPerformanceAuto();
+        // Builder performanceBuilder = new PerformanceBuilder(lijst met opties)
+    }
+
+    public Auto createBudgetAuto() {
+        System.out.println("Het wordt het budget model");
+        return new BrandstofBudgetAuto();
     }
 }

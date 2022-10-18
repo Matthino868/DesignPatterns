@@ -2,8 +2,7 @@
  * AutoFactory
  */
 public interface AutoFactory {
-    void createPerformanceAuto();
-
-    void createBudgetAuto();
+    Auto createPerformanceAuto();
+    Auto createBudgetAuto();
 
 }

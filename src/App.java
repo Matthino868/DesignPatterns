@@ -6,11 +6,9 @@ public class App {
         System.out.println("start");
 
         // Lijst met opties
-        // ArrayList[] lijst = {};
-        // Object[] lijst = {"elektrisch", "brandstof"};
         List<Object> lijst = new ArrayList<Object>();
         lijst.add("elektrisch");
-        lijst.add(true);
+        lijst.add("performance");
 
         AutoFactory factory;
         Auto auto;
@@ -21,9 +19,18 @@ public class App {
             factory = new BrandstofFactory();
         }
 
-        auto = new Auto(factory);
+        if(lijst.get(1) == "budget"){
+            auto = factory.createBudgetAuto();
+        }
+        else{
+            auto = factory.createPerformanceAuto();
+        }
 
-        auto.bouw();
+        auto.show();
+
+        // auto = new Auto(factory);
+
+        // auto.bouw();
 
 
         // AutoBuilder autoMetOpties = new AutoBuilder(lijst);

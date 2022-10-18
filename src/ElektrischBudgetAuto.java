@@ -1,8 +1,8 @@
 /**
- * BrandstofPerformanceAuto
+ * ElektrischBudgetAuto
  */
-public class BrandstofPerformanceAuto extends PerformanceAuto{
-    String type = "brandstof";
+public class ElektrischBudgetAuto  extends BudgetAuto{
+    String type = "elektrisch";
     @Override
     public String getType() {
         // TODO Auto-generated method stub
@@ -13,7 +13,7 @@ public class BrandstofPerformanceAuto extends PerformanceAuto{
         return super.model;
     }
     public void show(){
-        System.out.println("Dit is het "+ getType() + " " +  getModel() + " model");
+        System.out.println("Dit is het "+ getType() + getModel() + " model");
     }
     
 }

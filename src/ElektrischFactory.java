@@ -4,16 +4,17 @@
  */
 public class ElektrischFactory implements AutoFactory {
 
-    // public ElektrischFactory() {
-        
-	// }
+    public ElektrischFactory() {
+        System.out.println("Het wordt een elektrische auto");
+	}
 
-	public void createPerformanceAuto() {
-        System.out.println("Create PerformanceElektrischAuto");
-        // Builder performanceBuilder = new PerformanceBuilder(lijst met opties)
+	public Auto createPerformanceAuto() {
+        System.out.println("Het wordt het performance model");
+        return new ElektrischPerformanceAuto();
     }
 
-    public void createBudgetAuto() {
-        System.out.println("Create BudgetElektrischAuto");
+    public Auto createBudgetAuto() {
+        System.out.println("Het wordt het budget model");
+        return new ElektrischBudgetAuto();
     }
 }

@@ -1,14 +1,18 @@
 /**
  * Auto
  */
-public class Auto {
+public interface Auto {
+    String getType();
+    String getModel();
 
-    public Auto(AutoFactory factory) {
-        factory.
-    }
+    void show();
 
-    public void bouw() {
-        bouwmotor();
-    }
+    // public Auto(AutoFactory factory) {
+    //     factory.
+    // }
+
+    // public void bouw() {
+    //     bouwmotor();
+    // }
 
 }
