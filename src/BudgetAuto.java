@@ -1,0 +1,7 @@
+/**
+ * BudgetAuto
+ */
+public interface BudgetAuto {
+
+    
+}

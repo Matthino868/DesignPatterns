@@ -1,0 +1,7 @@
+/**
+ * PerformanceAuto
+ */
+public interface PerformanceAuto {
+
+    
+}
