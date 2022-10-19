@@ -3,13 +3,15 @@
  */
 public interface Auto {
 
-    setVelgen();
+    void setVelgen(String velg);
 
     String getType();
 
     String getModel();
 
     void show();
+
+	void setStoel(String stoel);
 
     // public Auto(AutoFactory factory) {
     // factory.

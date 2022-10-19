@@ -8,7 +8,7 @@ public class App {
         // Lijst met gekozen opties
         List<Object> opties = new ArrayList<Object>();
         opties.add("elektrisch");
-        opties.add("performance");
+        opties.add("budget");
         opties.add(true);
         opties.add(true);
         opties.add(true);
@@ -39,7 +39,8 @@ public class App {
             bob = new PerformanceBuilder();
         }
 
-        Auto finalauto = bob.bouw(auto, opties);
+        Auto finalauto =  bob.bouw(auto, opties);
+        finalauto.show();
     }
 }
 

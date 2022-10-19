@@ -3,38 +3,37 @@ import java.util.List;
 /**
  * PerformanceBuilder
  */
-public class PerformanceBuilder implements Builder{
-    
-    public PerformanceAuto bouw(Auto auto, List<Object> opties ) {
+public class PerformanceBuilder implements Builder {
 
-        specialeVelgen(auto, opties.get(3));
-        return null;
-    }
-
-    public void specialeVelgen(Auto auto, boolean bool){
-        if(bool){
-            auto.setVelgen("Sportvelgen");
+    public Auto bouw(Auto auto, List<Object> opties) {
+        if ((Boolean) opties.get(3) == true) {
+            auto = specialeVelgen(auto, "Sport velgen");
+        } else {
+            auto = specialeVelgen(auto, "Normale velgen");
         }
-        else{
-            auto.setVelgen("Normalevelgen");
-        }
+        return auto;
     }
 
-    public void upgradeKlimaatControle(Auto auto){
+    public Auto specialeVelgen(Auto auto, String velg) {
+        System.out.println("Er worden " + velg + " gemonteerd");
+        auto.setVelgen(velg);
+        return auto;
+    }
+
+    public void upgradeKlimaatControle() {
+        // return auto;
+    }
+
+    public void upgradeStoelen() {
+        // auto.setStoel(stoel);
+    }
+
+    public void upgradeAudioSysteem() {
 
     }
 
-    public void upgradeStoelen(Auto auto){
+    public void setAantalDeuren() {
 
     }
-
-    public void upgradeAudioSysteem(Auto auto){
-
-    }
-
-    public void setAantalDeuren(Auto auto){
-
-    }
-
 
 }

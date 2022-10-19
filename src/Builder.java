@@ -7,7 +7,7 @@ public interface Builder {
 
     Auto bouw(Auto auto, List<Object> opties );
 
-    void specialeVelgen();
+    Auto specialeVelgen(Auto auto, String velg);
 
     void upgradeKlimaatControle();
 
@@ -15,6 +15,6 @@ public interface Builder {
 
     void upgradeAudioSysteem();
 
-    void setAantalDeuren();
+    // void setAantalDeuren();
 
 }
