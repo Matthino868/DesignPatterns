@@ -3,48 +3,43 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        //System.out.println("start");
+        // System.out.println("start");
 
-        // Lijst met opties
-        List<Object> lijst = new ArrayList<Object>();
-        lijst.add("elektrisch");
-        lijst.add("budget");
+        // Lijst met gekozen opties
+        List<Object> opties = new ArrayList<Object>();
+        opties.add("elektrisch");
+        opties.add("performance");
+        opties.add(true);
+        opties.add(true);
+        opties.add(true);
+        opties.add(true);
 
         AutoFactory factory;
         Auto auto;
 
-        if (lijst.get(0) == "elektrisch") {
+        if (opties.get(0) == "elektrisch") {
             factory = new ElektrischFactory();
         } else {
             factory = new BrandstofFactory();
         }
 
-        if(lijst.get(1) == "budget"){
+        if (opties.get(1) == "budget") {
             auto = factory.createBudgetAuto();
-        }
-        
-        else{
+        } else {
             auto = factory.createPerformanceAuto();
         }
 
         auto.show();
 
-        // Builder bob;
+        Builder bob;
 
-        // if(lijst.get(1) == "budget"){
-        //     bob = new BudgetBuilder();
-        // }
-        // else{
-        //     bob = new BudgetBuilder();
-        // }
+        if (opties.get(1) == "budget") {
+            bob = new BudgetBuilder();
+        } else {
+            bob = new PerformanceBuilder();
+        }
 
-        // auto = new Auto(factory);
-
-        // auto.bouw();
-
-
-        // AutoBuilder autoMetOpties = new AutoBuilder(lijst);
-
+        Auto finalauto = bob.bouw(auto, opties);
     }
 }
 

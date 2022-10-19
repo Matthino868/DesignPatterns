@@ -2,6 +2,9 @@
  * Auto
  */
 public interface Auto {
+
+    setVelgen();
+
     String getType();
 
     String getModel();
