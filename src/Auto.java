@@ -4,7 +4,8 @@
 public interface Auto {
 
     void setVelgen(String velg);
-
+    String getVelgen();
+    String getKlimaatControle();
     String getType();
 
     String getModel();

@@ -17,6 +17,7 @@ public class BudgetBuilder implements Builder{
     public Auto specialeVelgen(Auto auto, String velg) {
         System.out.println("Er worden " + velg + " gemonteerd");
         auto.setVelgen(velg);
+        System.out.println("test"+ auto.getVelgen());
         return auto;
     }
 

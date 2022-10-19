@@ -13,5 +13,6 @@ public class ElektrischPerformanceAuto extends PerformanceAuto{
     }
     public void show(){
         System.out.println("Dit is het "+ getType() + " " +getModel() + " model");
+
     }
 }

@@ -14,8 +14,17 @@ public abstract class PerformanceAuto implements Auto {
         this.velgen = _velgen;
     }
 
+    public String getVelgen() {
+        return this.velgen;
+    }
+    
     public void setKlimaatControle(String _klimaatControl){
         this.klimaatControle = _klimaatControl;
+    }
+
+    public String getKlimaatControle(){
+		return this.klimaatControle;
+        
     }
 
     public void setAudioSysteem(String _audioSysteem){
