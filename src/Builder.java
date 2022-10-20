@@ -1,4 +1,7 @@
+
 import java.util.List;
+
+
 
 /**
  * Builder
@@ -15,6 +18,7 @@ public interface Builder {
 
     Auto upgradeAudioSysteem(Auto auto, Boolean upgradeAudioSysteem);
 
-    // void setAantalDeuren();
+    Auto setAantalDeuren(Auto auto, Boolean aantalDeuren);
 
+    Auto installeerToeter(Auto auto, String toeterType);
 }

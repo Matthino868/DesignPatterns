@@ -8,6 +8,7 @@ public abstract class PerformanceAuto implements Auto {
     String soortStoelen;
     String audioSysteem;
     int aantalDeuren;
+    Toeter toeter;
 
     @Override
     public void show() {
@@ -18,6 +19,11 @@ public abstract class PerformanceAuto implements Auto {
         System.out.println("Audio: " + getAudioSysteem());
         System.out.println("Aantal deuren: "+ getAantalDeuren());
     }
+
+    public void toeter(){
+        toeter.toeter();
+    }
+
 
     public String getModel() {
         return this.model;
@@ -57,8 +63,17 @@ public abstract class PerformanceAuto implements Auto {
     public void setSoortStoelen(String _stoel) {
         this.soortStoelen = _stoel;
     }
+
     public String getSoortStoelen() {
         return this.soortStoelen;
+    }
+
+    public void setToeter(Toeter toeter){
+        this.toeter = toeter;
+    }
+
+    public Toeter getToeter(){
+        return toeter;
     }
 }
     

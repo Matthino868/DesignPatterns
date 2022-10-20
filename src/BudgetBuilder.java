@@ -7,10 +7,11 @@ public class BudgetBuilder implements Builder{
    
     public Auto bouw(Auto auto, List<Object> opties) {
         specialeVelgen(auto, (Boolean) opties.get(2));
-        auto = upgradeKlimaatControle(auto, (Boolean)opties.get(3));
+        upgradeKlimaatControle(auto, (Boolean)opties.get(3));
         upgradeStoelen(auto, (Boolean) opties.get(4));
         upgradeAudioSysteem(auto, (Boolean) opties.get(5));
         setAantalDeuren(auto, (Boolean) opties.get(6));
+        installeerToeter(auto, (String) opties.get(7));
         return auto;
     }
 
@@ -39,10 +40,10 @@ public class BudgetBuilder implements Builder{
     public Auto upgradeStoelen(Auto auto, Boolean stoelSoort) {
         if (stoelSoort) {
             System.out.println("Er worden luxe leren stoelen ingezet");
-            auto.setSoortStoelen("Luxe leren");
+            auto.setSoortStoelen("Luxe leren stoelen");
         } else {
             System.out.println("Er worden normale suede stoelen ingezet");
-            auto.setSoortStoelen("Normale suede");
+            auto.setSoortStoelen("Normale suede stoelen");
         }
         return auto; 
     }
@@ -53,7 +54,7 @@ public class BudgetBuilder implements Builder{
             auto.setAudioSysteem("Sound+ audio");
         } else {
             System.out.println("Het audiosysteem wordt niet geupgrade");
-            auto.setKlimaatControle("Normaal audiosysteem");
+            auto.setAudioSysteem("Standaard audiosysteem");
         }
         return auto;
     }
@@ -67,6 +68,20 @@ public class BudgetBuilder implements Builder{
             auto.setAantalDeuren(3);
         }
         return auto; 
+    }
+
+    public Auto installeerToeter(Auto auto, String toeterType) {
+        if (toeterType == "trein") {
+           System.out.println("Er wordt een trein toeter geïnstalleerd");
+           auto.setToeter(new TreinToeter());
+        } else if (toeterType == "sirene") {
+           System.out.println("Er wordt een sirene toeter geïnstalleerd");
+           auto.setToeter(new SireneToeter());
+        } else if (toeterType == "bel") {
+           System.out.println("Er wordt een bel toeter geïnstalleerd");
+           auto.setToeter(new BelToeter());
+        }
+		return auto;
     }
 
 
