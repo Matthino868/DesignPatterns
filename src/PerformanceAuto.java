@@ -43,12 +43,12 @@ public abstract class PerformanceAuto implements Auto {
 
     public String getKlimaatControle() {
         return this.klimaatControle;
-
     }
 
     public void setAudioSysteem(String _audioSysteem) {
         this.audioSysteem = _audioSysteem;
     }
+
     public String getAudioSysteem() {
         return audioSysteem;
     }
