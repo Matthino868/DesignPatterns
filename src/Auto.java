@@ -3,17 +3,25 @@
  */
 public interface Auto {
 
-    void setVelgen(String velg);
-    String getVelgen();
-    String getKlimaatControle();
     String getType();
 
     String getModel();
 
+    void setVelgen(String velg);
+    String getVelgen();
+
+    void setKlimaatControle(String klimaatControle);
+    String getKlimaatControle();
+
+    void setAudioSysteem(String audioSysteem);
+
+    void setAantalDeuren(int aantalDeuren);
+    int getAantalDeuren();
+
     void show();
 
-	void setStoel(String stoel);
-
+    void setSoortStoelen(String stoel);
+    String getSoortStoelen();
     // public Auto(AutoFactory factory) {
     // factory.
     // }

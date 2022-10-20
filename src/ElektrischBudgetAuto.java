@@ -9,27 +9,24 @@ public class ElektrischBudgetAuto extends BudgetAuto {
         return type;
     }
 
-    
     public String getModel() {
         return super.model;
     }
-    public String getVelgen() {
-        return super.velgen;
+    
+    // public void setVelgen(String velg) {
+    //     super.velgen = velg;
+    // }
+    // public String getVelgen() {
+    //     return super.velgen;
+    // }
+
+	public void setSoortStoelen(String stoel) {
+        super.soortStoelen = stoel;
+	}
+    
+    public String getSoortStoelen() {
+        return super.getSoortStoelen();
     }
 
-    public void show() {
-        System.out.println("Dit is het " + getType() + " " + getModel() + " model");
-        // System.out.println(super.velgen);
-    }
-
-	public void setVelgen(String velg) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setStoel(String stoel) {
-		// TODO Auto-generated method stub
-
-	}
 
 }

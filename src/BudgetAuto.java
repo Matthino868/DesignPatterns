@@ -2,28 +2,41 @@
  * BudgetAuto
  */
 public abstract class BudgetAuto implements Auto {
-    String model = "performance";
+    String model = "budget";
     String velgen;
     String klimaatControle;
-    String stoelen;
+    String soortStoelen;
     String audioSysteem;
     int aantalDeuren;
     
+    @Override
+    public void show() {
+        System.out.println("Dit is het " + getType() + " " + getModel() + " model");
+        System.out.println("Velgen: " + getVelgen());
+        System.out.println("Klimaat controle: " + getKlimaatControle());
+        System.out.println("Stoelen: " + getSoortStoelen());
+        System.out.println("Audio: " + getAudioSysteem());
+        System.out.println("Aantal deuren: "+ getAantalDeuren());
+    }
+
+    public String getModel() {
+        return this.model;
+    }
 
     public void setVelgen(String _velgen){
         this.velgen = _velgen;
     }
 
-    // public String getVelgen(){
-    //     return this.velgen;
-    // }
+    public String getVelgen(){
+        return this.velgen;
+    }
 
     public void setKlimaatControle(String _klimaatControl){
         this.klimaatControle = _klimaatControl;
     }
 
     public String getKlimaatControle(){
-        return klimaatControle;
+        return this.klimaatControle;
     }
 
     public void setAudioSysteem(String _audioSysteem){
@@ -31,7 +44,7 @@ public abstract class BudgetAuto implements Auto {
     }
 
     public String getAudioSysteem(){
-        return audioSysteem;
+        return this.audioSysteem;
     }
 
     public void setAantalDeuren(int _aantalDeuren){
@@ -39,14 +52,14 @@ public abstract class BudgetAuto implements Auto {
     }
 
     public int getAantalDeuren(){
-        return aantalDeuren;
+        return this.aantalDeuren;
     }
 
-    public void setStoel(String _stoel){
-        this.stoelen = _stoel;
+    public void setSoortStoelen(String _stoel){
+        this.soortStoelen = _stoel;
     }
 
-    public String getStoel(){
-        return stoelen;
+    public String getSoortStoelen(){
+        return this.soortStoelen;
     }
 }

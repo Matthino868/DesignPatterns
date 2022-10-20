@@ -11,8 +11,4 @@ public class BrandstofPerformanceAuto extends PerformanceAuto{
     public String getModel() {
         return super.model;
     }
-    public void show(){
-        System.out.println("Dit is het "+ getType() + " " +  getModel() + " model");
-    }
-    
 }

@@ -7,13 +7,13 @@ public interface Builder {
 
     Auto bouw(Auto auto, List<Object> opties );
 
-    Auto specialeVelgen(Auto auto, String velg);
+    Auto specialeVelgen(Auto auto, Boolean velg);
 
-    void upgradeKlimaatControle();
+    Auto upgradeKlimaatControle(Auto auto, Boolean klimaatcontrole);
 
-    void upgradeStoelen();
+    Auto upgradeStoelen(Auto auto, Boolean stoelen);
 
-    void upgradeAudioSysteem();
+    Auto upgradeAudioSysteem(Auto auto, Boolean upgradeAudioSysteem);
 
     // void setAantalDeuren();
 
