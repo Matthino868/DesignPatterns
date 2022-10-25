@@ -6,6 +6,9 @@ public interface Auto {
     void show();
     void toeter();
 
+    void setBestelNummer(String bestelNummer);
+    String getBestelNummer();
+
     String getType();
     String getModel();
 

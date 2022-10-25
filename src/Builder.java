@@ -21,4 +21,6 @@ public interface Builder {
     Auto setAantalDeuren(Auto auto, Boolean aantalDeuren);
 
     Auto installeerToeter(Auto auto, String toeterType);
+
+    // void setEvent(String string, Email email);
 }

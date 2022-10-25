@@ -3,15 +3,26 @@ import java.util.List;
 /**
  * BudgetBuilder
  */
-public class BudgetBuilder implements Builder{
-   
+public class BudgetBuilder implements Builder {
+    EventManager events;
+
+    public BudgetBuilder() {
+        this.events = new EventManager();
+    }
+
     public Auto bouw(Auto auto, List<Object> opties) {
+        String bestelNummer = (String) opties.get(8);
+        events.subscribe(bestelNummer, new Email());
+        auto.setBestelNummer(bestelNummer);
         specialeVelgen(auto, (Boolean) opties.get(2));
-        upgradeKlimaatControle(auto, (Boolean)opties.get(3));
+        upgradeKlimaatControle(auto, (Boolean) opties.get(3));
         upgradeStoelen(auto, (Boolean) opties.get(4));
         upgradeAudioSysteem(auto, (Boolean) opties.get(5));
         setAantalDeuren(auto, (Boolean) opties.get(6));
         installeerToeter(auto, (String) opties.get(7));
+        auto.show();
+        events.notify(auto.getBestelNummer());
+        events.unsubscribe(bestelNummer);
         return auto;
     }
 
@@ -26,7 +37,7 @@ public class BudgetBuilder implements Builder{
         return auto;
     }
 
-    public Auto upgradeKlimaatControle(Auto auto, Boolean klimaatcontrole){
+    public Auto upgradeKlimaatControle(Auto auto, Boolean klimaatcontrole) {
         if (klimaatcontrole) {
             System.out.println("Er wordt Air Conditioning ingebouwd");
             auto.setKlimaatControle("Air Conditioning");
@@ -45,10 +56,10 @@ public class BudgetBuilder implements Builder{
             System.out.println("Er worden normale suede stoelen ingezet");
             auto.setSoortStoelen("Normale suede stoelen");
         }
-        return auto; 
+        return auto;
     }
 
-    public Auto upgradeAudioSysteem (Auto auto, Boolean upgradeAudioSysteem) {
+    public Auto upgradeAudioSysteem(Auto auto, Boolean upgradeAudioSysteem) {
         if (upgradeAudioSysteem) {
             System.out.println("Het audiosysteem wordt geupgrade naar Sound+");
             auto.setAudioSysteem("Sound+ audio");
@@ -67,20 +78,20 @@ public class BudgetBuilder implements Builder{
             System.out.println("Er worden 3 deuren gemonteerd");
             auto.setAantalDeuren(3);
         }
-        return auto; 
+        return auto;
     }
 
     public Auto installeerToeter(Auto auto, String toeterType) {
         if (toeterType == "trein") {
-           System.out.println("Er wordt een trein toeter geïnstalleerd");
-           auto.setToeter(new TreinToeter());
+            System.out.println("Er wordt een trein toeter geïnstalleerd");
+            auto.setToeter(new TreinToeter());
         } else if (toeterType == "sirene") {
-           System.out.println("Er wordt een sirene toeter geïnstalleerd");
-           auto.setToeter(new SireneToeter());
+            System.out.println("Er wordt een sirene toeter geïnstalleerd");
+            auto.setToeter(new SireneToeter());
         } else if (toeterType == "bel") {
-           System.out.println("Er wordt een bel toeter geïnstalleerd");
-           auto.setToeter(new BelToeter());
+            System.out.println("Er wordt een bel toeter geïnstalleerd");
+            auto.setToeter(new BelToeter());
         }
-		return auto;
+        return auto;
     }
 }

@@ -3,6 +3,7 @@
  */
 public abstract class PerformanceAuto implements Auto {
     String model = "performance";
+    String bestelnummer;
     String velgen;
     String klimaatControle;
     String soortStoelen;
@@ -17,16 +18,23 @@ public abstract class PerformanceAuto implements Auto {
         System.out.println("Klimaat controle: " + getKlimaatControle());
         System.out.println("Stoelen: " + getSoortStoelen());
         System.out.println("Audio: " + getAudioSysteem());
-        System.out.println("Aantal deuren: "+ getAantalDeuren());
+        System.out.println("Aantal deuren: " + getAantalDeuren());
     }
 
-    public void toeter(){
+    public void toeter() {
         toeter.toeter();
     }
 
-
     public String getModel() {
         return this.model;
+    }
+
+    public void setBestelNummer(String bestelNummer) {
+        this.bestelnummer = bestelNummer;
+    }
+
+    public String getBestelNummer() {
+        return this.bestelnummer;
     }
 
     public void setVelgen(String _velgen) {
@@ -56,6 +64,7 @@ public abstract class PerformanceAuto implements Auto {
     public void setAantalDeuren(int _aantalDeuren) {
         this.aantalDeuren = _aantalDeuren;
     }
+
     public int getAantalDeuren() {
         return aantalDeuren;
     }
@@ -68,12 +77,11 @@ public abstract class PerformanceAuto implements Auto {
         return this.soortStoelen;
     }
 
-    public void setToeter(Toeter toeter){
+    public void setToeter(Toeter toeter) {
         this.toeter = toeter;
     }
 
-    public Toeter getToeter(){
+    public Toeter getToeter() {
         return toeter;
     }
 }
-    
