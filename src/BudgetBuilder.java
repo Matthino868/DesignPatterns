@@ -4,15 +4,15 @@ import java.util.List;
  * BudgetBuilder
  */
 public class BudgetBuilder implements Builder {
-    EventManager events;
+    SalesMan Henk;
 
     public BudgetBuilder() {
-        this.events = new EventManager();
+        this.Henk = new SalesMan();
     }
 
     public Auto bouw(Auto auto, List<Object> opties) {
         String bestelNummer = (String) opties.get(8);
-        events.subscribe(bestelNummer, new Email());
+        Henk.subscribe(bestelNummer, new Email());
         auto.setBestelNummer(bestelNummer);
         specialeVelgen(auto, (Boolean) opties.get(2));
         upgradeKlimaatControle(auto, (Boolean) opties.get(3));
@@ -21,8 +21,8 @@ public class BudgetBuilder implements Builder {
         setAantalDeuren(auto, (Boolean) opties.get(6));
         installeerToeter(auto, (String) opties.get(7));
         auto.show();
-        events.notify(auto.getBestelNummer());
-        events.unsubscribe(bestelNummer);
+        Henk.notify(auto.getBestelNummer());
+        Henk.unsubscribe(bestelNummer);
         return auto;
     }
 

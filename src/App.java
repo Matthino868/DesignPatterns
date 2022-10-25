@@ -32,19 +32,13 @@ public class App {
 
         if (opties.get(1) == "budget") {
             auto = factory.createBudgetAuto();
-        } else {
-            auto = factory.createPerformanceAuto();
-        }
-
-        if (opties.get(1) == "budget") {
             bob = new BudgetBuilder();
         } else {
+            auto = factory.createPerformanceAuto();
             bob = new PerformanceBuilder();
         }
-        // bob.setEvent(bestelNummer, new Email());
 
         Auto finalauto = bob.bouw(auto, opties);
-        // finalauto.show();
         finalauto.toeter();
 
     }
