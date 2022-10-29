@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -8,6 +10,9 @@ public class App {
 
         // Lijst met gekozen opties
         List<Object> opties = new ArrayList<Object>();
+        Scanner scanner = new Scanner(System.in);
+        int i = scanner.nextInt();
+        i == 1 ? opties.add("brandstof") : opties.add("elektrisch");
         opties.add("brandstof");
         opties.add("performance");
         // True = goeie / False = slechte//
@@ -42,4 +47,6 @@ public class App {
         finalauto.toeter();
 
     }
+
+    
 }
