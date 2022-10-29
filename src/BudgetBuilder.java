@@ -7,7 +7,7 @@ public class BudgetBuilder implements Builder {
     SalesMan Henk;
 
     public BudgetBuilder() {
-        this.Henk = new SalesMan();
+        this.Henk = new SalesMan("Henk");
     }
 
     public Auto bouw(Auto auto, List<Object> opties) {

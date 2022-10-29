@@ -8,7 +8,7 @@ public class PerformanceBuilder implements Builder {
     SalesMan KlaasJan;
 
     public PerformanceBuilder() {
-        this.KlaasJan = new SalesMan();
+        this.KlaasJan = new SalesMan("KlaasJan");
     }
 
     public Auto bouw(Auto auto, List<Object> opties) {
