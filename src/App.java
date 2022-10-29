@@ -93,28 +93,7 @@ public class App {
     }
 
     public static void main(String[] args) throws Exception {
-        // System.out.println("start");
-
-        // Lijst met gekozen opties
-        // List<Object> opties = new ArrayList<Object>();
         List<Object> opties = check();
-        // System.out.println(Arrays.toString(opties.toArray()));
-        // return;
-        // Scanner scanner = new Scanner(System.in);
-        // int i = scanner.nextInt();
-        // // check ? opties.add("brandstof") : opties.add("elektrisch");
-        // opties.add(i == 1 ? "brandstof" : "performance");
-
-        // opties.add("brandstof");
-        // opties.add("performance");
-        // // True = goeie / False = slechte//
-        // opties.add(false); // Velgen
-        // opties.add(false); // Klimaatcontrole
-        // opties.add(false); // Soort stoelen
-        // opties.add(false); // Audio systeem
-        // opties.add(false); // Aantal deuren
-        // opties.add("sirene"); // Toeter, keuze uit: trein, sirene, bel
-
         AutoFactory factory;
         Builder bob;
         Auto auto;

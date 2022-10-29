@@ -1,3 +1,6 @@
+/**
+ * SireneToeter
+ */
 public class SireneToeter implements Toeter{
     
     public void toeter(){
