@@ -1,14 +1,11 @@
-
 import java.util.List;
-
-
 
 /**
  * Builder
  */
 public interface Builder {
 
-    Auto bouw(Auto auto, List<Object> opties );
+    Auto bouw(Auto auto, List<Object> opties);
 
     Auto specialeVelgen(Auto auto, Boolean velg);
 
@@ -21,6 +18,4 @@ public interface Builder {
     Auto setAantalDeuren(Auto auto, Boolean aantalDeuren);
 
     Auto installeerToeter(Auto auto, String toeterType);
-
-    // void setEvent(String string, Email email);
 }

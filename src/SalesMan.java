@@ -4,7 +4,7 @@ import java.util.Map;
 /*
  * SalesMan
  */
- 
+
 public class SalesMan {
 
     Map<String, Email> bestelNummers = new HashMap<>();
@@ -20,6 +20,5 @@ public class SalesMan {
     public void notify(String bestelNummer) {
         Email email = bestelNummers.get(bestelNummer);
         email.update(bestelNummer);
-
     }
 }
