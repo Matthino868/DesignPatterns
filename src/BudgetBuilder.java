@@ -19,8 +19,24 @@ public class BudgetBuilder implements Builder {
         upgradeStoelen(auto, (Boolean) opties.get(4));
         upgradeAudioSysteem(auto, (Boolean) opties.get(5));
         setAantalDeuren(auto, (Boolean) opties.get(6));
-        installeerToeter(auto, (String) opties.get(7));
+        installeerToeter(auto, (int) opties.get(7));
+        System.out.println();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        System.out.println("===========================");
+        System.out.println("Auto:");
+
         auto.show();
+        System.out.println();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        System.out.println("===========================");
         Henk.notify(auto.getBestelNummer());
         Henk.unsubscribe(bestelNummer);
         return auto;
@@ -81,14 +97,14 @@ public class BudgetBuilder implements Builder {
         return auto;
     }
 
-    public Auto installeerToeter(Auto auto, String toeterType) {
-        if (toeterType == "trein") {
+    public Auto installeerToeter(Auto auto, int toeterType) {
+        if (toeterType == 0) {
             System.out.println("Er wordt een trein toeter geïnstalleerd");
             auto.setToeter(new TreinToeter());
-        } else if (toeterType == "sirene") {
+        } else if (toeterType == 1) {
             System.out.println("Er wordt een sirene toeter geïnstalleerd");
             auto.setToeter(new SireneToeter());
-        } else if (toeterType == "bel") {
+        } else if (toeterType == 2) {
             System.out.println("Er wordt een bel toeter geïnstalleerd");
             auto.setToeter(new BelToeter());
         }

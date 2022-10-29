@@ -17,5 +17,5 @@ public interface Builder {
 
     Auto setAantalDeuren(Auto auto, Boolean aantalDeuren);
 
-    Auto installeerToeter(Auto auto, String toeterType);
+    Auto installeerToeter(Auto auto, int toeterType);
 }

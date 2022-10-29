@@ -29,12 +29,4 @@ public interface Auto {
 
     void setToeter(Toeter toeter);
     Toeter getToeter();
-    // public Auto(AutoFactory factory) {
-    // factory.
-    // }
-
-    // public void bouw() {
-    // bouwmotor();
-    // }
-
 }
