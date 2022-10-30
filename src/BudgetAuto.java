@@ -11,7 +11,6 @@ public abstract class BudgetAuto implements Auto {
     int aantalDeuren;
     Toeter toeter;
 
-    @Override
     public void show() {
         System.out.println("Dit is het " + getType() + " " + getModel() + " model");
         System.out.println("Velgen: " + getVelgen());
@@ -19,6 +18,7 @@ public abstract class BudgetAuto implements Auto {
         System.out.println("Stoelen: " + getSoortStoelen());
         System.out.println("Audio: " + getAudioSysteem());
         System.out.println("Aantal deuren: " + getAantalDeuren());
+        System.out.println("Toeter: " + getToeter());
     }
 
     public void toeter() {
@@ -81,7 +81,7 @@ public abstract class BudgetAuto implements Auto {
         this.toeter = toeter;
     }
 
-    public Toeter getToeter() {
-        return toeter;
+    public String getToeter() {
+        return toeter.getClass().getSimpleName();
     }
 }

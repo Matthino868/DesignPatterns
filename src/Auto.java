@@ -27,5 +27,5 @@ public interface Auto {
     String getSoortStoelen();
 
     void setToeter(Toeter toeter);
-    Toeter getToeter();
+    String getToeter();
 }

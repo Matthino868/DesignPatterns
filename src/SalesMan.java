@@ -41,9 +41,9 @@ public class SalesMan {
             switch (opties.size()) {
                 case 0:
                     // Brandstof of elektrisch
-                    System.out.println("Welke soort brandstof zoekt u?");
+                    System.out.println("Wilt u op brandstof of elektrisch rijden?");
                     System.out.println("0: Elektrisch");
-                    System.out.println("1: Benzine");
+                    System.out.println("1: Brandstof");
                     break;
                 case 1:
                     // Budget of performance
